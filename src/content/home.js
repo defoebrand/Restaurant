@@ -10,7 +10,7 @@ export default function homeContent() {
 
   const background = document.createElement('img');
   background.src = backgroundImage;
-  background.id = "backgroundImage";
+  background.classList.add("backgroundImage");
   content.appendChild(background);
 
   const headline = document.createElement('h1');
