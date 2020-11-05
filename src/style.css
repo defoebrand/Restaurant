@@ -1,26 +1,91 @@
-#contactBtn {
+.tab {
   position: fixed;
-  top: 50px;
-  right: 50px;
+  top: 5px;
+  padding: 5px;
+
+  /* color: black; */
 }
 
-#menuBtn {
-  position: fixed;
-  bottom: 50px;
+.active {
+  /* color: purple; */
+  text-shadow: 2px -2px 20px #403644, -2px 2px 20px #403644, 2px 2px 20px #403644, -2px -2px 20px #403644;
+}
+
+#contactTab {
+  right: 33%;
+  transform: translateX(50%);
+}
+
+#menuTab {
   left: 50%;
   transform: translateX(-50%);
 }
 
-#homeBtn {
-  position: fixed;
-  top: 50px;
-  left: 50px;
+#homeTab {
+  left: 33%;
+  transform: translateX(-33%);
 }
 
-#content {
+#content,
+.welcome {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 90vh;
+}
+
+#content {
+  position: relative;
+  margin-top: 50px;
+  margin-bottom: 15px;
+  height: calc(90vh - 90px);
+  min-height: 300px;
+}
+
+.home {
+  color: #f9f1f1;
+  text-shadow: 5px -5px 5px black, -5px 5px 5px black, 5px 5px 5px black, -5px -5px 5px black;
+}
+
+.menu {
+  color: #f9f1f1;
+  text-shadow: 5px -5px 5px black, -5px 5px 5px black, 5px 5px 5px black, -5px -5px 5px black;
+}
+
+.contact {
+  color: #333;
+  text-shadow: 5px -5px 5px #f4f0db, -5px 5px 5px #f4f0db, 5px 5px 5px #f4f0db, -5px -5px 5px #f4f0db;
+}
+
+#backgroundImage {
+  position: fixed;
+  top: 65px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  min-width: 95vw;
+  min-height: 90vh;
+  max-height: 95vh;
+}
+
+.menuLeft {
+  position: fixed;
+  top: 35%;
+  left: 15vw;
+  width: 33%;
+}
+
+.menuRight {
+  position: fixed;
+  top: 35%;
+  right: 10vw;
+  width: 33%;
+}
+
+.bottom {
+  top: 50%;
+}
+
+.contentTagline {
+  padding: 0 15%;
 }

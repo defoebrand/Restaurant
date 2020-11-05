@@ -1,26 +1,54 @@
-import createButton from './elements/buttons.js';
-import selectMenu from './elements/select.js';
+import createTab from './elements/tabs.js';
+import homeContent from './content/home.js';
+import menuContent from './content/menu.js';
+import contactContent from './content/contact.js';
 
 const body = document.querySelector('body');
-body.appendChild(createButton("home"));
-body.appendChild(createButton("contact"));
-body.appendChild(createButton("menu"));
+body.appendChild(createTab("home"));
+body.appendChild(createTab("contact"));
+body.appendChild(createTab("menu"));
+
+const tabs = document.getElementsByClassName('tab');
+
+let content = document.querySelector('.content');
+
+for (let i = 0; i < tabs.length; i++) {
+  tabs[i].onclick = () => {
+    styleCheck(tabs, i);
+    chooseContent(tabs, i);
+  }
+  chooseContent(tabs, i);
+}
+
+function styleCheck(tab, i) {
+
+  if (tab[i].value == 'inactive') {
+    for (let i = 0; i < tab.length; i++) {
+      if (tab[i].value == 'active') {
+        tab[i].value = 'inactive';
+        tab[i].classList.toggle('active');
+        tab[i].style.color = 'black';
+      }
+    }
+
+    tab[i].style.color = 'purple';
+    tab[i].classList.toggle('active');
+    tab[i].value = 'active';
+
+  }
+
+}
 
 
-const content = document.getElementById('content');
 
-const headline = document.createElement('h1');
-headline.textContent = "Welcome to Terra!";
-content.appendChild(headline);
-
-const tagline = document.createElement('h3');
-tagline.innerHTML = "The most <i>Traveled</i> restaurant in the world!";
-content.appendChild(tagline);
-
-const message = document.createElement('p');
-message.textContent = "Where would you like to go today?";
-content.appendChild(message);
-
-const menuCountries = ['italy', 'mexico', 'japan', 'america', 'india', 'africa']
-
-content.appendChild(selectMenu(menuCountries));
+function chooseContent(tab, i) {
+  if (tab[i].value == 'active') {
+    if (tab[i].textContent == 'Home') {
+      return homeContent();
+    } else if (tab[i].textContent == 'Menu') {
+      return menuContent();
+    } else {
+      return contactContent();
+    }
+  }
+}
