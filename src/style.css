@@ -1,0 +1,26 @@
+#contactBtn {
+  position: fixed;
+  top: 50px;
+  right: 50px;
+}
+
+#menuBtn {
+  position: fixed;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#homeBtn {
+  position: fixed;
+  top: 50px;
+  left: 50px;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
