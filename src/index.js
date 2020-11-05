@@ -42,13 +42,14 @@ function styleCheck(tab, i) {
 
 
 function chooseContent(tab, i) {
+
   if (tab[i].value == 'active') {
     if (tab[i].textContent == 'Home') {
       return homeContent();
     } else if (tab[i].textContent == 'Menu') {
       return menuContent();
     } else {
-      return contactContent();
+      return contactContent(content);
     }
   }
 }

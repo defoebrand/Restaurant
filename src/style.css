@@ -2,7 +2,6 @@
   position: fixed;
   top: 5px;
   padding: 5px;
-
   /* color: black; */
 }
 
@@ -44,7 +43,7 @@
 
 .home {
   color: #f9f1f1;
-  text-shadow: 5px -5px 5px black, -5px 5px 5px black, 5px 5px 5px black, -5px -5px 5px black;
+  text-shadow: 5px -5px 10px black, -5px 5px 10px black, 5px 5px 10px black, -5px -5px 10px black, -10px -10px 15px white, 10px 10px 15px white, -10px 10px 15px white, 10px -10px 15px white;
 }
 
 .menu {
