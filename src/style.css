@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "Menu";
+  font-family: 'Menu';
   src: url('./fonts/Menu.ttf');
 }
 
@@ -7,11 +7,9 @@
   position: fixed;
   top: 5px;
   padding: 5px;
-  /* color: black; */
 }
 
 .active {
-  /* color: purple; */
   text-shadow: 2px -2px 20px #403644, -2px 2px 20px #403644, 2px 2px 20px #403644, -2px -2px 20px #403644;
 }
 
@@ -49,16 +47,7 @@
 .home {
   color: #f9f1f1;
   text-shadow: 5px -5px 10px black, -5px 5px 10px black, 5px 5px 10px black, -5px -5px 10px black, -10px -10px 15px white, 10px 10px 15px white, -10px 10px 15px white, 10px -10px 15px white;
-}
-
-.menu {
-  font-family: 'Menu';
-  color: #413831;
-}
-
-.contact {
-  color: #333;
-  text-shadow: 5px -5px 5px #f4f0db, -5px 5px 5px #f4f0db, 5px 5px 5px #f4f0db, -5px -5px 5px #f4f0db;
+  text-align: center;
 }
 
 .backgroundImage {
@@ -70,6 +59,24 @@
   min-width: 97.5vw;
   min-height: 90vh;
   max-height: 92.5vh;
+}
+
+#destinations {
+  border-radius: 15px;
+  padding: 5px;
+  appearance: none;
+}
+
+.contact {
+  color: #333;
+  text-shadow: 5px -5px 5px #f4f0db, -5px 5px 5px #f4f0db, 5px 5px 5px #f4f0db, -5px -5px 5px #f4f0db;
+  text-align: center;
+  padding: 0 15%;
+}
+
+.menu {
+  font-family: 'Menu', sans-serif;
+  color: #413831;
 }
 
 #menu {
@@ -100,10 +107,6 @@
   top: 225px;
   transform: translateX(50%);
   font-size: 1.5rem;
-}
-
-.contentTagline {
-  padding: 0 15%;
 }
 
 .menuChoice1 {

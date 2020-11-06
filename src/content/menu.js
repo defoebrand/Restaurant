@@ -1,12 +1,6 @@
 import backgroundImage from '../images/menu.jpeg';
-import selectMenu from '../elements/select.js';
 
-export default function menuContent() {
-
-  const content = document.getElementById('content');
-  while (content.firstChild) {
-    content.removeChild(content.firstChild);
-  };
+export default function menuContent(content) {
 
   const background = document.createElement('img');
   background.src = backgroundImage;
@@ -110,8 +104,7 @@ export default function menuContent() {
 
 
 
-  content.classList.remove('home');
-  content.classList.remove('contact');
+
   content.classList.add('menu');
 
   return content;
