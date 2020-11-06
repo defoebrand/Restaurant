@@ -53,15 +53,15 @@ const contentCreator = {
     const tab = document.createElement('p');
 
     function value(location) {
-      if (location == 'home') {
+      let value = 'active'
+      if (location === 'home') {
         tab.style.color = 'purple';
         tab.classList.add('active');
-        let value = 'active';
       } else {
         tab.style.color = 'black';
-        let value = 'inactive';
+        value = 'inactive';
       }
-      return value
+      return value;
     }
     tab.id = `${location}Tab`;
     tab.classList.add('tab');

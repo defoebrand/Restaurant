@@ -15,14 +15,14 @@ function chooseContent(tab, i) {
   if (tab[i].value === 'active') {
     const content = document.getElementById('content');
     if (tab[i].textContent === 'Home') {
-      let content = homeContent(content);
+      let view = homeContent(content);
     } else if (tab[i].textContent === 'Menu') {
-      let content = menuContent(content);
+      let view = menuContent(content);
     } else {
-      let content = contactContent(content);
+      let view = contactContent(content);
     }
   }
-  return content
+  return view;
 }
 
 function clearContent() {
