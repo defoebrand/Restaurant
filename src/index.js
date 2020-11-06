@@ -12,14 +12,15 @@ body.appendChild(contentCreator.createTab('menu'));
 const tabs = document.getElementsByClassName('tab');
 
 function chooseContent(tab, i) {
+  let view = '';
   if (tab[i].value === 'active') {
     const content = document.getElementById('content');
     if (tab[i].textContent === 'Home') {
-      let view = homeContent(content);
+      view = homeContent(content);
     } else if (tab[i].textContent === 'Menu') {
-      let view = menuContent(content);
+      view = menuContent(content);
     } else {
-      let view = contactContent(content);
+      view = contactContent(content);
     }
   }
   return view;
