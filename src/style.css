@@ -85,7 +85,7 @@
   top: 225px;
   left: 13%;
   width: 33%;
-  font-size: 1.25rem;
+  font-size: 1.75rem;
 }
 
 .menuRight {
@@ -93,12 +93,13 @@
   top: 225px;
   right: 10%;
   width: 33%;
-  font-size: 1.25rem;
+  font-size: 1.75rem;
 }
 
 .bottom {
-  top: 350px;
-  font-size: 1rem;
+  top: 225px;
+  transform: translateX(50%);
+  font-size: 1.5rem;
 }
 
 .contentTagline {
@@ -106,31 +107,34 @@
 }
 
 .menuChoice1 {
-  top: 250px;
-  font-family: Gothic, sans-serif;
-}
-
-.menuChoice2 {
   top: 275px;
   font-family: Gothic, sans-serif;
 }
 
+.menuChoice2 {
+  top: 325px;
+  font-family: Gothic, sans-serif;
+}
+
 .menuChoice3 {
-  top: 300px;
+  top: 375px;
   font-family: Gothic, sans-serif;
 }
 
 .menuChoice4 {
-  top: 365px;
+  top: 275px;
+  transform: translateX(50%);
   font-family: Gothic, sans-serif;
 }
 
 .menuChoice5 {
-  top: 390px;
+  top: 325px;
+  transform: translateX(50%);
   font-family: Gothic, sans-serif;
 }
 
 .menuChoice6 {
-  top: 415px;
+  top: 375px;
+  transform: translateX(50%);
   font-family: Gothic, sans-serif;
 }

@@ -13,7 +13,7 @@ export default function contactContent() {
   content.appendChild(headline);
 
   const tagline = document.createElement('h3');
-  tagline.textContent = "Here at Terra we value the cuisine and cultures of all humans. As such we have compiled a menu that spans the globe and are proud to present this culinary trip around the world. So please, sit back and enjoy your trip!";
+  tagline.innerHTML = `Here at Terra we value the cuisine and cultures of all humans. As such we have compiled a menu that spans the globe and are proud to present this culinary trip around the world. So please, sit back and enjoy your journey!<br><br>Please join us at any of the following locations: <br><br> Lithuania |  India |  Italy | England | America | Mexico | Africa`;
   tagline.style.textAlign = "center";
   tagline.classList.add('contentTagline')
   content.appendChild(tagline);

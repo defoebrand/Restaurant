@@ -15,6 +15,7 @@ export default function homeContent() {
 
   const headline = document.createElement('h1');
   headline.textContent = "Welcome to Terra!";
+  headline.style.textAlign = "center";
   content.appendChild(headline);
 
   const tagline = document.createElement('h3');
@@ -24,9 +25,10 @@ export default function homeContent() {
 
   const message = document.createElement('p');
   message.textContent = "Where would you like to go today?";
+  message.style.textAlign = "center";
   content.appendChild(message);
 
-  const menuCountries = ['italy', 'mexico', 'japan', 'america', 'india', 'africa']
+  const menuCountries = ['lithuania', 'italy', 'mexico', 'japan', 'america', 'india', 'africa']
   content.appendChild(selectMenu(menuCountries));
 
   content.classList.remove('menu');
