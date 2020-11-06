@@ -1,40 +1,40 @@
-import capFirst from './capFirst.js';
+import capFirst from './capFirst';
 
 const contentCreator = {
 
   withText(type, content, className) {
 
-    let element = document.createElement(type);
+    const element = document.createElement(type);
     element.textContent = content;
     element.classList.add(className);
-    return element
+    return element;
   },
 
   withHTML(type, content, className) {
 
-    let element = document.createElement(type);
+    const element = document.createElement(type);
     element.innerHTML = content;
     element.classList.add(className);
-    return element
+    return element;
   },
 
   withIMG(type, content, className, id) {
 
-    let element = document.createElement(type);
+    const element = document.createElement(type);
     element.src = content;
     element.classList.add(className);
     element.id = id;
-    return element
+    return element;
   },
 
   menuItem(type, content, side, placement, size) {
 
-    let element = document.createElement(type);
+    const element = document.createElement(type);
     element.textContent = content;
     element.classList.add(`menu${side}`);
     element.classList.add(`menu${placement}`);
     element.classList.add(`menu${size}`);
-    return element
+    return element;
   },
 
   selectMenu(options) {
@@ -42,24 +42,20 @@ const contentCreator = {
     const element = document.createElement('select');
     element.id = 'selectMenu';
 
-    for (let i = 0; i < options.length; i++) {
+    for (let i = 0; i < options.length; i += 1) {
       const option = document.createElement('option');
       option.value = `${options[i]}`;
       option.innerText = `${capFirst(options[i])}`;
       element.appendChild(option);
     }
-    return element
+    return element;
   },
 
   createTab(location) {
     const tab = document.createElement('p');
-    tab.id = `${location}Tab`;
-    tab.classList.add("tab");
-    tab.value = value(location);
-    tab.textContent = `${capFirst(location)}`;
 
     function value(location) {
-      if (location == 'home') {
+      if (location === 'home') {
         tab.style.color = 'purple';
         tab.classList.add('active');
         return 'active';
@@ -68,8 +64,13 @@ const contentCreator = {
         return 'inactive';
       }
     };
+    tab.id = `${location}Tab`;
+    tab.classList.add('tab');
+    tab.textContent = `${capFirst(location)}`;
+    tab.value = value(location);
+
     return tab;
   },
-}
+};
 
-export default contentCreator
+export default contentCreator;

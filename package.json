@@ -9,6 +9,7 @@
   "author": "Brandon Defoe",
   "license": "ISC",
   "devDependencies": {
+    "eslint": "^7.12.1",
     "file-loader": "^6.2.0",
     "image-webpack-loader": "^7.0.1",
     "webpack": "^5.4.0",
