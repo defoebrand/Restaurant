@@ -5,12 +5,13 @@ export default function menuContent(content) {
   const background = document.createElement('img');
   background.src = backgroundImage;
   background.classList.add("backgroundImage");
-  background.id = 'menu';
+  background.id = 'menuImage';
   content.appendChild(background);
 
   const snacks = document.createElement('h2');
   snacks.textContent = "Snacks";
   snacks.classList.add('menuLeft');
+  snacks.classList.add('menuHeading');
   content.appendChild(snacks);
 
   const snackChoice1 = document.createElement('p');
@@ -34,30 +35,35 @@ export default function menuContent(content) {
   const hotDishes = document.createElement('h2');
   hotDishes.textContent = "Hot Dishes";
   hotDishes.classList.add('menuLeft');
-  hotDishes.classList.add('bottom');
+  hotDishes.classList.add('menuHeading');
+  hotDishes.classList.add('additional');
   content.appendChild(hotDishes);
 
   const hotDishes1 = document.createElement('p');
   hotDishes1.textContent = "Cepelinai   --   $2.50";
   hotDishes1.classList.add('menuLeft');
-  hotDishes1.classList.add('menuChoice4');
+  hotDishes1.classList.add('menuChoice1');
+  hotDishes1.classList.add('additional');
   content.appendChild(hotDishes1);
 
   const hotDishes2 = document.createElement('p');
   hotDishes2.textContent = "Koldunai   --   $3.00";
   hotDishes2.classList.add('menuLeft');
-  hotDishes2.classList.add('menuChoice5');
+  hotDishes2.classList.add('menuChoice2');
+  hotDishes2.classList.add('additional');
   content.appendChild(hotDishes2);
 
   const hotDishes3 = document.createElement('p');
   hotDishes3.textContent = "Balandeliai   --   $3.50";
   hotDishes3.classList.add('menuLeft');
-  hotDishes3.classList.add('menuChoice6');
+  hotDishes3.classList.add('menuChoice3');
+  hotDishes3.classList.add('additional');
   content.appendChild(hotDishes3);
 
   const drinks = document.createElement('h2');
   drinks.textContent = "Drinks";
   drinks.classList.add('menuRight');
+  drinks.classList.add('menuHeading');
   content.appendChild(drinks);
 
   const drinkChoice1 = document.createElement('p');
@@ -81,25 +87,29 @@ export default function menuContent(content) {
   const desserts = document.createElement('h2');
   desserts.textContent = "Desserts";
   desserts.classList.add('menuRight');
-  desserts.classList.add('bottom');
+  desserts.classList.add('menuHeading');
+  desserts.classList.add('additional');
   content.appendChild(desserts);
 
   const dessertChoice1 = document.createElement('p');
   dessertChoice1.textContent = "Tiramisu   --   $1.50";
   dessertChoice1.classList.add('menuRight');
-  dessertChoice1.classList.add('menuChoice4');
+  dessertChoice1.classList.add('menuChoice1');
+  dessertChoice1.classList.add('additional');
   content.appendChild(dessertChoice1);
 
   const dessertChoice2 = document.createElement('p');
   dessertChoice2.textContent = "Ledai   --   $1.50";
   dessertChoice2.classList.add('menuRight');
-  dessertChoice2.classList.add('menuChoice5');
+  dessertChoice2.classList.add('menuChoice2');
+  dessertChoice2.classList.add('additional');
   content.appendChild(dessertChoice2);
 
   const dessertChoice3 = document.createElement('p');
   dessertChoice3.textContent = "Pyragas   --   $2.00";
   dessertChoice3.classList.add('menuRight');
-  dessertChoice3.classList.add('menuChoice6');
+  dessertChoice3.classList.add('menuChoice3');
+  dessertChoice3.classList.add('additional');
   content.appendChild(dessertChoice3);
 
 

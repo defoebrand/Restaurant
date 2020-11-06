@@ -10,40 +10,14 @@ body.appendChild(createTab("menu"));
 
 const tabs = document.getElementsByClassName('tab');
 
+fillContent();
+
 function fillContent() {
   for (let i = 0; i < tabs.length; i++) {
     tabs[i].onclick = () => {
-      styleCheck(tabs, i);
-      chooseContent(tabs, i);
+      tabCheck(tabs, i);
     }
     chooseContent(tabs, i);
-  }
-}
-
-function clearContent() {
-  let content = document.getElementById('content');
-  while (content.firstChild) {
-    content.removeChild(content.firstChild);
-  };
-
-  content.classList.remove('home');
-  content.classList.remove('contact');
-  content.classList.remove('menu');
-}
-
-function styleCheck(tab, i) {
-  if (tab[i].value == 'inactive') {
-    clearContent();
-    for (let i = 0; i < tab.length; i++) {
-      if (tab[i].value == 'active') {
-        tab[i].value = 'inactive';
-        tab[i].classList.toggle('active');
-        tab[i].style.color = 'black';
-      }
-    }
-    tab[i].value = 'active';
-    tab[i].classList.toggle('active');
-    tab[i].style.color = 'purple';
   }
 }
 
@@ -60,5 +34,30 @@ function chooseContent(tab, i) {
   }
 }
 
+function tabCheck(tab, i) {
+  if (tab[i].value == 'inactive') {
+    clearContent();
+    for (let i = 0; i < tab.length; i++) {
+      if (tab[i].value == 'active') {
+        tab[i].value = 'inactive';
+        tab[i].classList.toggle('active');
+        tab[i].style.color = 'black';
+      }
+    }
+    tab[i].value = 'active';
+    tab[i].classList.toggle('active');
+    tab[i].style.color = 'purple';
+    chooseContent(tabs, i);
+  }
+}
 
-fillContent();
+function clearContent() {
+  let content = document.getElementById('content');
+  while (content.firstChild) {
+    content.removeChild(content.firstChild);
+  };
+
+  content.classList.remove('home');
+  content.classList.remove('contact');
+  content.classList.remove('menu');
+}

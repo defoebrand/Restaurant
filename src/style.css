@@ -61,7 +61,7 @@
   max-height: 92.5vh;
 }
 
-#destinations {
+#selectMenu {
   border-radius: 15px;
   padding: 5px;
   appearance: none;
@@ -75,11 +75,11 @@
 }
 
 .menu {
-  font-family: 'Menu', sans-serif;
+  font-family: Gothic, sans-serif;
   color: #413831;
 }
 
-#menu {
+#menuImage {
   min-width: 500px;
   width: calc(100vw - 4%);
   max-width: calc(100vw - 4%);
@@ -87,57 +87,45 @@
   max-height: 500px;
 }
 
-.menuLeft {
-  position: fixed;
-  top: 225px;
-  left: 13%;
-  width: 33%;
-  font-size: 1.75rem;
-}
-
+.menuLeft,
 .menuRight {
   position: fixed;
   top: 225px;
-  right: 10%;
   width: 33%;
   font-size: 1.75rem;
 }
 
-.bottom {
-  top: 225px;
+.menuLeft {
+  left: 13%;
+}
+
+.menuRight {
+  right: 10%;
+}
+
+.additional {
   transform: translateX(50%);
   font-size: 1.5rem;
 }
 
+.menuHeading {
+  font-family: 'Menu', sans-serif;
+}
+
 .menuChoice1 {
   top: 275px;
-  font-family: Gothic, sans-serif;
 }
 
 .menuChoice2 {
   top: 325px;
-  font-family: Gothic, sans-serif;
 }
 
 .menuChoice3 {
   top: 375px;
-  font-family: Gothic, sans-serif;
 }
 
-.menuChoice4 {
-  top: 275px;
-  transform: translateX(50%);
-  font-family: Gothic, sans-serif;
-}
-
-.menuChoice5 {
-  top: 325px;
-  transform: translateX(50%);
-  font-family: Gothic, sans-serif;
-}
-
-.menuChoice6 {
-  top: 375px;
-  transform: translateX(50%);
-  font-family: Gothic, sans-serif;
+@media screen and (max-width: 1340px) {
+  .additional {
+    display: none;
+  }
 }

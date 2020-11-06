@@ -1,26 +1,19 @@
 import backgroundImage from '../images/home.jpeg';
-import selectMenu from '../elements/select.js';
+import contentCreator from '../helpers/contentCreator';
 
 export default function homeContent(content) {
 
-  const background = document.createElement('img');
-  background.src = backgroundImage;
-  background.classList.add("backgroundImage");
-  content.appendChild(background);
+  content.appendChild(contentCreator.withIMG('img', backgroundImage, "backgroundImage"));
 
-  const headline = document.createElement('h1');
-  headline.textContent = "Welcome to Terra!";
-  content.appendChild(headline);
+  content.appendChild(contentCreator.withText('h1', 'Welcome to Terra!'));
 
-  const tagline = document.createElement('h3');
-  tagline.innerHTML = "The most <i>Traveled</i> restaurant in the world!";
-  content.appendChild(tagline);
+  content.appendChild(contentCreator.withHTML('h3', 'The most <i>Traveled</i> restaurant in the world!'));
 
-  const message = document.createElement('p');
-  message.textContent = "Where would you like to go today?";
-  content.appendChild(message);
+  content.appendChild(contentCreator.withText('p', 'Where would you like to go today?'));
 
-  content.appendChild(selectMenu());
+  const destinations = ['choose a destination...', 'lithuania', 'china', 'italy', 'mexico', 'japan', 'america', 'india', 'africa']
+
+  content.appendChild(contentCreator.selectMenu(destinations));
 
   content.classList.add('home');
 
