@@ -2,6 +2,7 @@ import contentCreator from '../src/helpers/contentCreator';
 import homeContent from './content/home.js';
 import menuContent from './content/menu.js';
 import contactContent from './content/contact.js';
+import './style.css';
 
 const body = document.querySelector('body');
 body.appendChild(contentCreator.createTab("home"));
