@@ -92,7 +92,7 @@
   position: fixed;
   top: 225px;
   width: 33%;
-  font-size: 1.75rem;
+  font-size: 1.25rem;
 }
 
 .menuLeft {
@@ -103,13 +103,9 @@
   right: 10%;
 }
 
-.additional {
-  transform: translateX(50%);
-  font-size: 1.5rem;
-}
-
 .menuHeading {
   font-family: 'Menu', sans-serif;
+  font-size: 1.75rem;
 }
 
 .menuChoice1 {
@@ -124,8 +120,12 @@
   top: 375px;
 }
 
-@media screen and (max-width: 1340px) {
-  .additional {
+.menuLarge {
+  transform: translateX(50%);
+}
+
+@media screen and (max-width: 1256px) {
+  .menuLarge {
     display: none;
   }
 }

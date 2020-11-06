@@ -1,5 +1,5 @@
-import backgroundImage from '../images/home.jpeg';
 import contentCreator from '../helpers/contentCreator';
+import backgroundImage from '../images/home.jpeg';
 
 export default function homeContent(content) {
 

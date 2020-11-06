@@ -1,12 +1,12 @@
-import createTab from './elements/tabs.js';
+import contentCreator from '../src/helpers/contentCreator';
 import homeContent from './content/home.js';
 import menuContent from './content/menu.js';
 import contactContent from './content/contact.js';
 
 const body = document.querySelector('body');
-body.appendChild(createTab("home"));
-body.appendChild(createTab("contact"));
-body.appendChild(createTab("menu"));
+body.appendChild(contentCreator.createTab("home"));
+body.appendChild(contentCreator.createTab("contact"));
+body.appendChild(contentCreator.createTab("menu"));
 
 const tabs = document.getElementsByClassName('tab');
 

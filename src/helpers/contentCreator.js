@@ -18,11 +18,22 @@ const contentCreator = {
     return element
   },
 
-  withIMG(type, content, className) {
+  withIMG(type, content, className, id) {
 
     let element = document.createElement(type);
     element.src = content;
     element.classList.add(className);
+    element.id = id;
+    return element
+  },
+
+  menuItem(type, content, side, placement, size) {
+
+    let element = document.createElement(type);
+    element.textContent = content;
+    element.classList.add(`menu${side}`);
+    element.classList.add(`menu${placement}`);
+    element.classList.add(`menu${size}`);
     return element
   },
 
@@ -37,9 +48,7 @@ const contentCreator = {
       option.innerText = `${capFirst(options[i])}`;
       element.appendChild(option);
     }
-
     return element
-
   },
 
   createTab(location) {
@@ -59,11 +68,8 @@ const contentCreator = {
         return 'inactive';
       }
     };
-
-
     return tab;
   },
-
 }
 
 export default contentCreator

@@ -1,119 +1,41 @@
+import contentCreator from '../helpers/contentCreator';
 import backgroundImage from '../images/menu.jpeg';
 
 export default function menuContent(content) {
 
-  const background = document.createElement('img');
-  background.src = backgroundImage;
-  background.classList.add("backgroundImage");
-  background.id = 'menuImage';
-  content.appendChild(background);
+  content.appendChild(contentCreator.withIMG('img', backgroundImage, 'backgroundImage', 'menuImage'));
 
-  const snacks = document.createElement('h2');
-  snacks.textContent = "Snacks";
-  snacks.classList.add('menuLeft');
-  snacks.classList.add('menuHeading');
-  content.appendChild(snacks);
+  content.appendChild(contentCreator.menuItem('h2', 'Snacks', 'Left', 'Heading'));
 
-  const snackChoice1 = document.createElement('p');
-  snackChoice1.textContent = "Herring   --   $3.00";
-  snackChoice1.classList.add('menuLeft');
-  snackChoice1.classList.add('menuChoice1');
-  content.appendChild(snackChoice1);
+  content.appendChild(contentCreator.menuItem('p', 'Herring   --   $3.00', 'Left', 'Choice1'));
 
-  const snackChoice2 = document.createElement('p');
-  snackChoice2.textContent = "Cheeses   --   $2.50";
-  snackChoice2.classList.add('menuLeft');
-  snackChoice2.classList.add('menuChoice2');
-  content.appendChild(snackChoice2);
+  content.appendChild(contentCreator.menuItem('p', 'Cheeses   --   $2.50', 'Left', 'Choice2'));
 
-  const snackChoice3 = document.createElement('p');
-  snackChoice3.textContent = "Meats   --   $3.50";
-  snackChoice3.classList.add('menuLeft');
-  snackChoice3.classList.add('menuChoice3');
-  content.appendChild(snackChoice3);
+  content.appendChild(contentCreator.menuItem('p', 'Meats   --   $3.50', 'Left', 'Choice3'));
 
-  const hotDishes = document.createElement('h2');
-  hotDishes.textContent = "Hot Dishes";
-  hotDishes.classList.add('menuLeft');
-  hotDishes.classList.add('menuHeading');
-  hotDishes.classList.add('additional');
-  content.appendChild(hotDishes);
+  content.appendChild(contentCreator.menuItem('h2', 'Hot Dishes', 'Left', 'Heading', 'Large'));
 
-  const hotDishes1 = document.createElement('p');
-  hotDishes1.textContent = "Cepelinai   --   $2.50";
-  hotDishes1.classList.add('menuLeft');
-  hotDishes1.classList.add('menuChoice1');
-  hotDishes1.classList.add('additional');
-  content.appendChild(hotDishes1);
+  content.appendChild(contentCreator.menuItem('p', 'Cepelinai   --   $2.50', 'Left', 'Choice1', 'Large'));
 
-  const hotDishes2 = document.createElement('p');
-  hotDishes2.textContent = "Koldunai   --   $3.00";
-  hotDishes2.classList.add('menuLeft');
-  hotDishes2.classList.add('menuChoice2');
-  hotDishes2.classList.add('additional');
-  content.appendChild(hotDishes2);
+  content.appendChild(contentCreator.menuItem('p', 'Koldunai   --   $3.00', 'Left', 'Choice2', 'Large'));
 
-  const hotDishes3 = document.createElement('p');
-  hotDishes3.textContent = "Balandeliai   --   $3.50";
-  hotDishes3.classList.add('menuLeft');
-  hotDishes3.classList.add('menuChoice3');
-  hotDishes3.classList.add('additional');
-  content.appendChild(hotDishes3);
+  content.appendChild(contentCreator.menuItem('p', 'Balandeliai   --   $3.50', 'Left', 'Choice3', 'Large'));
 
-  const drinks = document.createElement('h2');
-  drinks.textContent = "Drinks";
-  drinks.classList.add('menuRight');
-  drinks.classList.add('menuHeading');
-  content.appendChild(drinks);
+  content.appendChild(contentCreator.menuItem('h2', 'Drinks', 'Right', 'Heading'));
 
-  const drinkChoice1 = document.createElement('p');
-  drinkChoice1.textContent = "Gira   --   $0.50";
-  drinkChoice1.classList.add('menuRight');
-  drinkChoice1.classList.add('menuChoice1');
-  content.appendChild(drinkChoice1);
+  content.appendChild(contentCreator.menuItem('p', 'Gira   --   $0.50', 'Right', 'Choice1'));
 
-  const drinkChoice2 = document.createElement('p');
-  drinkChoice2.textContent = "Coffee   --   $1.00";
-  drinkChoice2.classList.add('menuRight');
-  drinkChoice2.classList.add('menuChoice2');
-  content.appendChild(drinkChoice2);
+  content.appendChild(contentCreator.menuItem('p', 'Coffee   --   $1.00', 'Right', 'Choice2'));
 
-  const drinkChoice3 = document.createElement('p');
-  drinkChoice3.textContent = "Tea   --   $0.75";
-  drinkChoice3.classList.add('menuRight');
-  drinkChoice3.classList.add('menuChoice3');
-  content.appendChild(drinkChoice3);
+  content.appendChild(contentCreator.menuItem('p', 'Tea   --   $0.75', 'Right', 'Choice3'));
 
-  const desserts = document.createElement('h2');
-  desserts.textContent = "Desserts";
-  desserts.classList.add('menuRight');
-  desserts.classList.add('menuHeading');
-  desserts.classList.add('additional');
-  content.appendChild(desserts);
+  content.appendChild(contentCreator.menuItem('h2', 'Desserts', 'Right', 'Heading', 'Large'));
 
-  const dessertChoice1 = document.createElement('p');
-  dessertChoice1.textContent = "Tiramisu   --   $1.50";
-  dessertChoice1.classList.add('menuRight');
-  dessertChoice1.classList.add('menuChoice1');
-  dessertChoice1.classList.add('additional');
-  content.appendChild(dessertChoice1);
+  content.appendChild(contentCreator.menuItem('p', 'Tiramisu   --   $1.50', 'Right', 'Choice1', 'Large'));
 
-  const dessertChoice2 = document.createElement('p');
-  dessertChoice2.textContent = "Ledai   --   $1.50";
-  dessertChoice2.classList.add('menuRight');
-  dessertChoice2.classList.add('menuChoice2');
-  dessertChoice2.classList.add('additional');
-  content.appendChild(dessertChoice2);
+  content.appendChild(contentCreator.menuItem('p', 'Ledai   --   $1.50', 'Right', 'Choice2', 'Large'));
 
-  const dessertChoice3 = document.createElement('p');
-  dessertChoice3.textContent = "Pyragas   --   $2.00";
-  dessertChoice3.classList.add('menuRight');
-  dessertChoice3.classList.add('menuChoice3');
-  dessertChoice3.classList.add('additional');
-  content.appendChild(dessertChoice3);
-
-
-
+  content.appendChild(contentCreator.menuItem('p', 'Pyragas   --   $2.00', 'Right', 'Choice3', 'Large'));
 
   content.classList.add('menu');
 
